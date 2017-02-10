@@ -24,5 +24,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 
     $result = $conn->query($query);
     if (!$result) die($conn->error);
+
+    $conn->close();
+
+     echo '<script>window.location.href = "customer_view.php?post=true";</script>';
 }
 ?>

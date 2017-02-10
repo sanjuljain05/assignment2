@@ -90,6 +90,12 @@
   <div class="container" style="padding-top: 80px">
 <?php // query.php
 
+try {
+  if(isset($_GET['post']) && $_GET['post'] == 'true')
+    echo '<div class="alert alert-success" role="alert"> Data added successfully.</div>';
+} catch(Exception $e) {}
+
+
 // require_once 'login.php';
 
 // login.php
